@@ -100,6 +100,22 @@ main {
   transition: transform 0.3s;
 }
 
+/* responsive adjustments: on narrow screens stack image above text and enlarge */
+@media (max-width: 600px) {
+  .student, .leader {
+    flex-direction: column;
+    text-align: center; /* текст під фото */
+  }
+  .student img, .leader img {
+    width: 100%;         /* займає всю ширину картки */
+    max-width: none;    /* дозволяє зростати й не обмежується */
+    margin: 0 0 15px 0; /* відстань від тексту */
+  }
+  .student p, .leader p {
+    width: 100%;         /* опис під фото повністю */
+  }
+}
+
 .student img:hover, .leader img:hover {
   transform: scale(1.05);
 }
