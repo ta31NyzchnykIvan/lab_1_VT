@@ -19,10 +19,50 @@ header {
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   padding: 0;
   margin: 10px 0 0 0;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+  }
+
+  header h1,
+  main h1,
+  main h2 {
+    font-size: 1.4rem;
+  }
+
+  main {
+    padding: 18px;
+  }
+
+  .group-photo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .group-photo p {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .schedule {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 8px;
+  }
+
+  .schedule > li {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 nav a {
@@ -50,6 +90,7 @@ main {
   display: flex;
   gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -60,6 +101,26 @@ main {
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s;
+}
+
+.group-photo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.group-photo img {
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+
+.group-photo p {
+  max-width: 700px;
 }
 
 .btn:hover {
